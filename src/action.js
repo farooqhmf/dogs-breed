@@ -22,3 +22,26 @@ export function getDogsDataFailure (err) {
     payload: err
   };
 }
+
+export function getBreedDataRequest (breed) {
+  return{
+    type: types.GET_BREED_DATA_REQUEST,
+    payload: {
+      breed: breed, 
+    }
+  };
+}
+
+export function getBreedDataSuccess (data) {
+return{
+  type: types.GET_BREED_DATA_SUCCESS,
+  payload: data
+};
+}
+
+export function getBreedDataFailure (err) {
+return {
+  type: types.GET_BREED_DATA_FAILURE,
+  payload: err
+};
+}

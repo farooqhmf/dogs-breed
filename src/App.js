@@ -5,11 +5,6 @@ import { connect } from 'react-redux';
 import { getDogsData } from './action'
 
 class App extends Component {
-  state = {
-      dogs: '',
-      dogKey: [],
-    }
-
   componentDidMount() {
     this.props.dispatch(getDogsData());
   }
